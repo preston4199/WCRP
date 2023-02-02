@@ -1,199 +1,152 @@
-<link rel="stylesheet" href="https://bugs.westcoastroleplay.us/forms/styles.css">
-<header class="Header color-bg-default color-fg-default flex-justify-between">
-  <div class="Header-item">
-    <img class="header-icon" src="https://spacestation14.io/images/main/icon.svg" alt="">
-  </div>
-  <div class="Header-item h1 flex-self-center">Report an issue for: Wizards Den</div>
-  <div></div>
-</header>
-<div class="d-flex flex-column flex-lg-row px-6 pt-3" style="min-height: 83vh;">
-  <main class="flex-self-stretch mr-6 mb-4 mb-lg-0 width-sm-full issue-form-layout-left">
-    <div class="Box">
-      <div class="Box-header">
-        <h3>
-          Create
-          <select class="form-control" name="issue-template-select" id="issue-template-select">
-            <option value="bug" selected>Issue</option>
-            <option value="feature">Feature Request</option>
-          </select>
-        </h3>
-      </div>
-      <form action="post">
-        <div class="Box-body">
-          <div class="form-group">
-            <div class="form-group-header">
-              <label for="title-input">Title</label>
-            </div>
-            <div class="form-group-body">
-              <input class="form-control input-block input-lg" type="text" id="title-input" />
-            </div>
-          </div>
-          <div class="form-group markdown-input">
-            <div class="form-group-header">
-              <label for="example-textarea">Message</label>
-            </div>
-            <div class="form-group-body">
-              <div class="tabnav">
-                <div class="toolbar mr-2 float-right">
-                  <button class="btn-octicon icon btn-sm float-right" type="button" data-icon="pencil" aria-label="Desktop icon">
-                    <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                      <path fill-rule="evenodd" d="M3.75 2a.75.75 0 01.75.75V7h7V2.75a.75.75 0 011.5 0v10.5a.75.75 0 01-1.5 0V8.5h-7v4.75a.75.75 0 01-1.5 0V2.75A.75.75 0 013.75 2z"></path>
-                    </svg>
-                  </button>
-                  <button class="btn-octicon icon btn-sm float-right" type="button" data-icon="pencil" aria-label="Desktop icon">
-                    <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                      <path fill-rule="evenodd" d="M4 2a1 1 0 00-1 1v10a1 1 0 001 1h5.5a3.5 3.5 0 001.852-6.47A3.5 3.5 0 008.5 2H4zm4.5 5a1.5 1.5 0 100-3H5v3h3.5zM5 9v3h4.5a1.5 1.5 0 000-3H5z"></path>
-                    </svg>
-                  </button>
-                  <button class="btn-octicon icon btn-sm float-right" type="button" data-icon="pencil" aria-label="Desktop icon">
-                    <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                      <path fill-rule="evenodd" d="M6 2.75A.75.75 0 016.75 2h6.5a.75.75 0 010 1.5h-2.505l-3.858 9H9.25a.75.75 0 010 1.5h-6.5a.75.75 0 010-1.5h2.505l3.858-9H6.75A.75.75 0 016 2.75z"></path>
-                    </svg>
-                  </button>
-                  <button class="btn-octicon icon btn-sm float-right" type="button" data-icon="pencil" aria-label="Desktop icon">
-                    <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                      <path fill-rule="evenodd" d="M1.75 2.5a.75.75 0 000 1.5h10.5a.75.75 0 000-1.5H1.75zm4 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM2.5 7.75a.75.75 0 00-1.5 0v6a.75.75 0 001.5 0v-6z"></path>
-                    </svg>
-                  </button>
-                  <button class="btn-octicon icon btn-sm float-right" type="button" data-icon="pencil" aria-label="Desktop icon">
-                    <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                      <path fill-rule="evenodd" d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"></path>
-                    </svg>
-                  </button>
-                  <button class="btn-octicon icon btn-sm float-right" type="button" data-icon="pencil" aria-label="Desktop icon">
-                    <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                      <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
-                    </svg>
-                  </button>
-                  <button class="btn-octicon icon btn-sm float-right" type="button" data-icon="pencil" aria-label="Desktop icon">
-                    <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                      <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
-                    </svg>
-                  </button>
-                  <button class="btn-octicon icon btn-sm float-right" type="button" data-icon="pencil" aria-label="Desktop icon">
-                    <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                      <path fill-rule="evenodd" d="M2.003 2.5a.5.5 0 00-.723-.447l-1.003.5a.5.5 0 00.446.895l.28-.14V6H.5a.5.5 0 000 1h2.006a.5.5 0 100-1h-.503V2.5zM5 3.25a.75.75 0 01.75-.75h8.5a.75.75 0 010 1.5h-8.5A.75.75 0 015 3.25zm0 5a.75.75 0 01.75-.75h8.5a.75.75 0 010 1.5h-8.5A.75.75 0 015 8.25zm0 5a.75.75 0 01.75-.75h8.5a.75.75 0 010 1.5h-8.5a.75.75 0 01-.75-.75zM.924 10.32l.003-.004a.851.851 0 01.144-.153A.66.66 0 011.5 10c.195 0 .306.068.374.146a.57.57 0 01.128.376c0 .453-.269.682-.8 1.078l-.035.025C.692 11.98 0 12.495 0 13.5a.5.5 0 00.5.5h2.003a.5.5 0 000-1H1.146c.132-.197.351-.372.654-.597l.047-.035c.47-.35 1.156-.858 1.156-1.845 0-.365-.118-.744-.377-1.038-.268-.303-.658-.484-1.126-.484-.48 0-.84.202-1.068.392a1.858 1.858 0 00-.348.384l-.007.011-.002.004-.001.002-.001.001a.5.5 0 00.851.525zM.5 10.055l-.427-.26.427.26z"></path>
-                    </svg>
-                  </button>
-                  <button class="btn-octicon icon btn-sm float-right" type="button" data-icon="pencil" aria-label="Desktop icon">
-                    <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                      <path fill-rule="evenodd" d="M2.5 3.5v3h3v-3h-3zM2 2a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V3a1 1 0 00-1-1H2zm4.655 8.595a.75.75 0 010 1.06L4.03 14.28a.75.75 0 01-1.06 0l-1.5-1.5a.75.75 0 111.06-1.06l.97.97 2.095-2.095a.75.75 0 011.06 0zM9.75 2.5a.75.75 0 000 1.5h5.5a.75.75 0 000-1.5h-5.5zm0 5a.75.75 0 000 1.5h5.5a.75.75 0 000-1.5h-5.5zm0 5a.75.75 0 000 1.5h5.5a.75.75 0 000-1.5h-5.5z"></path>
-                    </svg>
-                  </button>
-                </div>
+<style> 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
 
-                <nav class="tabnav-tabs" aria-label="Foo bar">
-                  <a class="tabnav-tab" href="#url" aria-current="page">Write</a>
-                  <a class="tabnav-tab" href="#url">Preview</a>
-                </nav>
-              </div>
-              <textarea class="form-control markdown-textarea" id="example-textarea">
-## Description
-<!-- Explain your issue in detail. Issues without proper explanation are liable to be closed by maintainers. -->
+#header {
+  margin: 20px auto;
+  width: 80%;
+  padding: 20px;
+  color: #008080;
+}
 
-**Reproduction**
-<!-- Include the steps to reproduce if applicable. -->
+#header h2 {
+  float: left;
+  text-transform: uppercase;
+}
 
-**Additional context**
-<!-- Add any other context about the problem here. Anything you think is related to the issue. -->
-      </textarea>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-group-header">
-              <label for="image-upload">Upload Screenshot</label>
-            </div>
-            <div class="form-group-body">
-              <input lass="form-control" type="file" id="image-upload" name="image-upload" accept=".jpg, .jpeg, .png" />
-            </div>
-          </div>
-        </div>
-        <div class="Box-footer text-right">
-          <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-        </div>
-      </form>
-    </div>
-  </main>
-  <div class="Layout-divider"></div>
-  <div class="issue-form-layout-right">
-    <div class="Box" style="min-height: 100%;">
-      <div class="Box-header">
-        <h3>Similiar issues <span class="Counter Counter--gray">2</span></h3>
-      </div>
-      <div class="Box-body" style="display: none;">
-        <div class="blankslate">
-          <h4 class="blankslate-heading">Your issue is unique!</h4>
-          <p>Fill in the issues title to get similiar issues displayed here.</p>
-        </div>
-      </div>
-      <ul>
-        <li class="Box-row">
-          <div class=" d-flex f3 flex-items-baseline">
-            <a class="d-flex flex-items-baseline color-fg-open" href="https://github.com/space-wizards/space-station-14/issues/12340" target="_blank">
-              <svg class="octicon mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-                <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
-              </svg>
-              <div class="text-bold mr-4">#12340</div>
-            </a>
-            <div>Closet CanCollide mispredict</div>
-          </div>
-          <div class="issue-excerpt border-top color-border-subtle p-3 mt-2 f5">
-            <p> Steps to repro:</p>
-            <ul>
-              <li>Open closet</li>
-              <li>Close closet</li>
-            </ul>
-            ...
-          </div>
-        </li>
-        <li class="Box-row">
-          <div class=" d-flex f3 flex-items-baseline">
-            <a class="d-flex flex-items-baseline color-fg-done" href="https://github.com/space-wizards/space-station-14/issues/12292" target="_blank">
-              <svg class="octicon mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                <path d="M11.28 6.78a.75.75 0 00-1.06-1.06L7.25 8.69 5.78 7.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l3.5-3.5z"></path>
-                <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-1.5 0a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"></path>
-              </svg>
-              <div class="text-bold mr-4">#12292</div>
-            </a>
-            <div>Buttons cannot be interacted with</div>
-          </div>
-          <div class="issue-excerpt border-top color-border-subtle p-3 mt-2 f5">
-            <p> Trying to interact with a button in any means necessary is impossible. No highlight and you cannot right click it.</p>
-            <p class="text-bold">Reproduction</p>
-            <ul>
-              <li>Place a button anywhere (or find an already placed one)</li>
-            </ul>
-            ...
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+#header ul {
+  float: right;
+}
+
+#header ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#header ul li a {
+  text-decoration: none;
+  color: #008080;
+}
+
+hr {
+  color: #f4f4f4;
+  width: 80%;
+  margin: 20px auto;
+}
+
+#bug-form {
+  margin: 20px auto;
+  width: 50%;
+  border: 2px solid #bbb;
+  border-radius: 5px;
+}
+
+#form-heading {
+  background: #bbb;
+  color: #fff;
+  padding: 15px;
+}
+
+#form-body {
+  padding: 10px 15px;
+}
+
+.form-element {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#form-body select {
+  background: #14d095;
+  color: #fff;
+  height: 30px;
+}
+
+#form-body textarea {
+  resize: vertical;
+}
+
+#form-footer {
+  background: #ddd;
+  padding: 15px;
+  text-align: right;
+}
+
+#submit-btn {
+  background: #14d095;
+  padding: 10px;
+  color: #fff;
+  border: 0px;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+</style>
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Question 12</title>
+
+</head>
+<body>
+<div id="header">
+  <h2>To the New</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Quick help</a></li>
+  </ul>
 </div>
-<footer class="footer width-full container-lg p-responsive">
-  <nav class="col-12 col-lg-8 pb-2 f6 mt-4 mb-2 color-fg-muted width-full">
-    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-      <li class="mr-3 mr-lg-0">
-        <a href="#">Imprint</a>
-      </li>
-      <li class="mr-3 mr-lg-0">
-        <a href="#">Privacy</a>
-      </li>
-      <li class="mr-3 mr-lg-0">
-        <a href="#">Github</a>
-      </li>
-      <li class="mr-3 mr-lg-0">
-        <a href="#">Login</a>
-      </li>
-    </ul>
-  </nav>
-</footer>
-
-<!--<div class="Layout Layout--sidebarPosition-end Layout--divided Layout--sidebar-wide">
-  <main class="Layout-main width-full">
-  </main>
-  <div class="Layout-divider"></div>
-  <div class="Layout-sidebar px-3" style="min-height: 100vh">
-  </div>  
-</div>-->
+<hr/>
+<div id="bug-form">
+  <form>
+    <h3 id="form-heading">Bug Report</h3>
+    <div id="form-body">
+      <label>Title:*</label><br/>
+      <input class="form-element" type="text" name="title" required>
+      <label>Description:*</label><br/>
+      <textarea class="form-element" name="description" rows="4"></textarea>
+      <label>Operating system:</label><br/>
+      <select class="form-element" name="operatingsystem">
+        <option value="windowsxp" selected>Windows XP</option>
+        <option value="macos">Mac OS</option>
+        <option value="ubuntu">Ubuntu</option>
+      </select>
+      <label>Product:*</label><br/>
+      <select class="form-element" name="product">
+        <option value="formoid" selected>Formoid</option>
+        <option value="someprod">Some other product</option>
+        <option value="anotherprod">Or another product</option>
+      </select>
+      <label>Version:*</label><br/>
+      <input class="form-element" style="width: 20%;" type="text" name="title" required><br/>
+      <label>License:</label><br/>
+      <div class="form-element">
+        <table width="100%">
+          <tr>
+            <td style="width: 50%;"><input type="radio" name="license" value="free"> Free</td>
+            <td style="width: 50%;"><input type="radio" name="license" value="business"> Business<br></td>
+          </tr>
+        </table>
+      </div>
+      <label>Severity:</label><br/>
+      <select class="form-element" name="severity">
+        <option value="critical" selected>Critical</option>
+        <option value="moderate">Moderate</option>
+        <option value="low">Low</option>
+      </select>
+      <label>Attachments:</label><br/>
+      <input class="form-element" type="file">
+    </div>
+    <div id="form-footer">
+      <input type="submit" id="submit-btn" value="Send">
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
